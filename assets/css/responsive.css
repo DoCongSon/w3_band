@@ -1,0 +1,126 @@
+/* pc */
+@media (min-width: 64em) {
+
+}
+
+/* mobile + tablet */
+@media (max-width: 63.999em) {
+    
+    #footer .socials-list a{
+        font-size: 32px;
+        margin: 0 12px;
+    }
+    
+    #footer .copyright {
+        font-size: 24px;
+        margin: 28px 0;
+    }
+
+    #footer .copyright a {
+        color: rgb(66, 0, 68);
+        padding: 12px;
+    }
+    .send-btn {
+        font-size: 20px;
+        margin-top: 16px;
+    }
+    .btn {
+        padding: 16px;
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 46.25em) and (max-width: 63.999em){
+    
+}
+
+/* Mobile */
+@media (max-width: 46.2499em) {
+
+    .btn {
+        width: 100%;
+    }
+
+    .send-btn {
+        margin-right: 0px;
+    }
+
+    .mt-mobile-8px {
+        margin-top: 8px;
+    }
+
+    .col-full-mobile {
+        width: 100% !important;
+    }
+    
+    #header {
+        overflow: hidden;
+    }
+
+    #header .mobile-menu-btn {
+        display: block;
+    }
+
+    #header .search-button {
+        display: none;
+    }
+
+    #nav {
+        display: block;
+    }
+
+    #nav > li {
+        display: block;
+    }
+
+    #nav > li:first-child {
+        display: inline-block;
+    }
+
+    #nav li a {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    #nav .subnav {
+        position: initial;
+        background-color: darkslategray;
+    }
+
+    #nav .subnav a {
+        color: white;
+        padding: 6px 57px;
+    }
+
+    #content .conten-section {
+        padding: 64px 16px;
+    }
+
+    #content .menber-img {
+        width: 60%;
+        vertical-align: middle;
+        border-style: none;
+        margin-bottom: 16px;
+    }
+
+    .places-list{
+        padding: 32px 0px;
+        margin: 0;
+    }
+    
+    .place-item {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .contact {
+        margin: 0px;
+    }
+
+    .contact-info {
+        padding: 0 0 16px;
+    }
+
+
+}

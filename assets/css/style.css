@@ -1,0 +1,401 @@
+/* reset CSS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* giải quyết vấn đề float */
+/* .clear {
+    clear: both;
+} */
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.text-white {
+    color: white !important;
+}
+.text-center {
+    text-align: center;
+}
+.row {
+    margin: 0 -16px;
+}
+.col {
+    float: left;
+    padding: 0px 8px;
+
+}
+
+.col-3 {
+    width: 33.33333%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+#main {
+
+}
+
+#header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: black;
+    height: 46px;
+    z-index: 1;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: none;
+    float: right;
+}
+
+#header .search-button {
+    display: inline-block;
+    float: right;
+    
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc !important;
+}
+
+#header .mobile-menu-btn:hover .mobile-nenu-icom {
+    color: #000;
+}
+
+#header .search-button:hover {
+    cursor: pointer;
+    background-color: crimson;
+}
+
+#header .mobile-nenu-icom,
+#header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
+    padding: 0 21px;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+#nav {
+    display: inline-block;
+}
+#nav > li {
+    display: inline-block;
+}
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    display: block;
+    padding: 0px 24px;
+}       
+
+#nav > li:hover > a, #nav .subnav li:hover a {
+    background-color: #ccc;
+    color: black;
+}
+#nav li:hover  .subnav {
+    display: block;
+}
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 46px;
+    left: 0;
+    min-width: 160px;
+    box-shadow: 0 0 10px dimgray;
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+}
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+
+#slider {
+    min-height: 500px;
+    /* background-image: url(/w3_band/assets/img/LosAngeles.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; */
+    background: url(../img/LosAngeles.jpg) top center / cover no-repeat;
+    margin-top: 46px;
+    padding-top: 50%;
+    position: relative;
+}
+
+.text-content {
+    position: absolute;
+    bottom: 38px;
+    /* left: 0;
+    right: 0; */
+    right: 50%;
+    transform: translateX(50%);
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 2px violet;
+}
+
+.text-heading {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+
+.text-description {
+
+}
+
+#content {
+
+}
+
+#content .conten-section  {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.5;
+    padding: 64px 24px;
+}
+
+#content .conten-section .section-heading {
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+#content .conten-section .section-sub-heading {
+    text-align: center;
+    opacity: 0.6;
+    font-style: italic;
+    font-size: 15px;
+    margin: 15px 0;
+}
+#content .about-text {
+    text-align: justify;
+    margin: 15px 0;
+}
+
+#content .menber-item {
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+}
+
+
+#content .menber-name {
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+#content .menber-img {
+    width: 154px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px dimgray;
+}
+
+.tour-section {
+    background-color: black;
+}
+
+.tickets-list {
+    background-color: white;
+    color: #757575;
+    font-size: 15px;
+    line-height: 1.5;
+    border: 1px solid #ccc !important;
+    list-style-type: none;
+}
+
+.tickets-list li {
+    padding: 8px 16px;
+    border: 1px solid #ccc !important;
+}
+
+.sold-out {
+    color: #fff!important;
+    background-color: #f44336!important;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    margin-left: 16px !important;
+}
+
+.quantity {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 50%;
+    float: right;
+    margin-right: 16px;
+}
+
+.places-list{
+    padding: 32px 8px;
+}
+
+
+.place-item{
+    margin: 16px 0;
+    font-size: 15px;
+    color: black;
+    line-height: 1.5;
+    background-clip: content-box;
+}
+
+
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body{
+    background-color: white;
+    padding: 0.1em 16px;
+}
+
+
+.place-heading{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+
+.place-time{
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+
+.place-desc{
+    margin: 15px 0;
+}
+
+
+.btn{
+    padding: 8px 16px;
+    background-color: black;
+    margin-bottom: 16px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info i[class *= "ti-"] {
+    width: 30px;
+    display: inline-block        ;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    display: block;
+    width: 100%;
+    padding: 8px;
+
+}
+
+.contact {
+    padding: 32px 0;
+}
+
+
+.send-btn {
+    float: right;
+    margin-right: -8px;
+    margin-top: 16px;
+    padding: 11px 17px;
+}
+
+.map-section {
+    width: 100%;
+    filter: grayscale(50%);
+}
+
+#footer {
+    margin: 64px 16px;
+    font-size: 24px;
+    opacity: 0.6;
+    text-align: center;
+    
+}
+
+#footer .socials-list a{
+    text-decoration: none;
+    color: #000;
+}
+
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    opacity: 0.6;
+}
+
+#footer .copyright {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#footer .copyright a {
+    color: #000;
+}
