@@ -399,3 +399,106 @@ html {
 #footer .copyright a {
     color: #000;
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: showModal ease-in-out 0.3s;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-container{
+    width: 900px;
+    max-width: calc(100% - 32px);
+    background-color: #fff;
+    position: relative;
+}
+.modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: red;
+}
+
+.modal-header{
+    height: 129px;
+    background-color: #009688;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-header .ti-bag{
+    margin-right: 16px;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+.modal-label{
+    font-size: 15px;
+    margin: 16px 0 8px;
+}
+.ti-shopping-cart{
+
+}
+.modal-input{
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+.modal-btn{
+    margin-top: 20px;
+    height: 54px;
+    cursor: pointer;
+    border: none;
+    background-color: #009688;
+    color: #fff;
+    font-size: 20px;
+}
+
+.modal-btn:hover {
+    opacity: 0.6;
+}
+
+
+.modal-footer{
+    float: right;
+    margin: 16px;
+}
+
+.modal-help a {
+    color: #2196f3;
+}
+
+@keyframes showModal{
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}   

@@ -101,7 +101,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-center">Buy tickets</a>
+                                <button class="btn text-center js-btn">Buy tickets</button>
                             </div>
                         </div>
                         <div class="col-full-mobile place-item col col-3">
@@ -110,7 +110,7 @@
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-center">Buy tickets</a>
+                                <button class="btn text-center js-btn">Buy tickets</button>
                             </div>
                         </div>
                         <div class="col-full-mobile place-item col col-3">
@@ -119,7 +119,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="btn text-center">Buy tickets</a>
+                                <button class="btn text-center js-btn">Buy tickets</button>
                             </div>
                         </div>
                     </div>
@@ -176,6 +176,35 @@
                 <a href="http://w3.css">w3.css</a>
             </p>
         </div>
+
+        <div class="modal js-modal">
+            <div class="modal-container js-modal-container">
+                <div class="modal-close js-modal-close">
+                    <i class="ti-close"></i>
+                </div>
+                <div class="modal-header">
+                    <i class="ti-bag"></i>
+                    tickets
+                </div>
+
+                <div class="modal-body js-modal-body">
+                    <label for="" class="modal-label">
+                        <i class="ti-shopping-cart"></i>
+                        Tickets, $15 per person
+                    </label>
+                    <input type="text" name="" class="modal-input" placeholder="How Many?">
+                    <label for="" class="modal-label">
+                        <i class="ti-user"></i>
+                        Send to
+                    </label>
+                    <input type="text" name="" class="modal-input" placeholder="Enter Email">
+                    <button class="modal-btn" type="submit">Pay</button>
+                </div>
+                <div class="modal-footer">
+                    <p class="modal-help">Need <a href="#">Help?</a></p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -204,6 +233,24 @@
                     header.style.height = null;
                 }
             }
+        }
+    </script>
+
+    <script>
+        buyTicketButtons = document.querySelectorAll('.js-btn');
+        for (const button of buyTicketButtons) {
+            button.onclick = showModal;
+        }
+        document.querySelector('.js-modal-close').onclick = hideModal;
+        document.querySelector('.js-modal').onclick = hideModal;
+        document.querySelector('.js-modal-container').onclick = function(event) {
+            event.stopPropagation();
+        }
+        function showModal() {
+            document.querySelector('.js-modal').classList.add('open');
+        }
+        function hideModal() {
+            document.querySelector('.js-modal').classList.remove('open');
         }
     </script>
 </body>
